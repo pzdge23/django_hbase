@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Year</title>
+
+</head>
+<body>
+<h1><B> <pre>Details for : {{ month }} {{year}}</pre> </B></h1>
+<br>
+<pre><h2><B>Select a date :   </B></h2></pre>
+
+<form method="post" action="../date/">{% csrf_token %}
+  Year : <input type="text" name="year" value={{year}} readonly>
+  Month : <input type="text" name="month" value={{month}} readonly>
+  {{form}}
+  <input type="Submit" value="Choose Date">
+</form>
+
+
+
+
+{% if year %}
+<div data-width="300" data-height="300">
+{{ index|safe }}
+</div>
+{% endif %}
+
+
+
+</body>
+</html>

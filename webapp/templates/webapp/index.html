@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>index page</title>
+  </head>
+  <body>
+<h1>{{title}}</h1>
+    <form class="" action='year/' method="post">{% csrf_token %}
+      <!-- <input type="text" name='url' placeholder='Shortenyoururl' value=""/> -->
+      {{form}}
+      <input type="Submit" value="Choose Year">
+    </form>
+    {{tables}}
+    {% if index %}
+    <div data-width="300" data-height="300">
+    {{ index|safe }}
+    <!-- {{tables}}
+    {{year_values}} -->
+    <!-- {{X}}
+    {{Y}} -->
+    </div>
+    {% endif %}
+  </body>
+</html>
